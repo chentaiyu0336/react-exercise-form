@@ -3,9 +3,9 @@ import './myProfile.less';
 
 class MyProfile extends Component {
   state = {
-    name: "Your name",
+    name: "",
     gender: "Male",
-    description: "Description about yourself",
+    description: "",
     check: true,
   };
   handleNameChange = (event) => {
@@ -31,7 +31,7 @@ class MyProfile extends Component {
 
         <div className="name">
           <label htmlFor="name">Name</label>
-          <input type="text" value={this.state.name} onChange={this.handleNameChange} />
+          <input type="text" placeholder="Your name" value={this.state.name} onChange={this.handleNameChange} />
         </div>
 
         <div className="gender">
@@ -44,7 +44,7 @@ class MyProfile extends Component {
 
         <div className="description">
           <label htmlFor="description">Description</label>
-          <input type="text" value={this.state.description} onChange={this.handleDescriptionChange} />
+          <input type="text" placeholder="Description about yourself" value={this.state.description} onChange={this.handleDescriptionChange} />
         </div >
 
         <div className="check">
